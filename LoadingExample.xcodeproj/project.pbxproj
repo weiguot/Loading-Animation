@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -87,7 +87,6 @@
 				4EC807CC229DA8890030465B /* LoadingExample */,
 				4EC807E1229DA88A0030465B /* LoadingExampleTests */,
 				4EC807EC229DA88A0030465B /* LoadingExampleUITests */,
-				4EC807CB229DA8890030465B /* Products */,
 				BA84CD4CFC0890ED2B5E1709 /* Pods */,
 				73E6CEA2F96D43D4A5C26B52 /* Frameworks */,
 			);
@@ -101,6 +100,7 @@
 				4EC807E9229DA88A0030465B /* LoadingExampleUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		4EC807CC229DA8890030465B /* LoadingExample */ = {
@@ -129,6 +129,7 @@
 		4EC807EC229DA88A0030465B /* LoadingExampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				4EC807CB229DA8890030465B /* Products */,
 				4EC807ED229DA88A0030465B /* LoadingExampleUITests.swift */,
 				4EC807EF229DA88A0030465B /* Info.plist */,
 			);
@@ -309,16 +310,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LoadingExample/Pods-LoadingExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LoadingExample/Pods-LoadingExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-LoadingExample/Pods-LoadingExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

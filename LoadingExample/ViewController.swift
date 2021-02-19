@@ -15,12 +15,12 @@ struct Item {
     let image: UIImage?
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Outlets
     
     @IBOutlet var tableView: UITableView!
-
+    
     // MARK: Props
     
     var items: [Item] = [] {
@@ -30,9 +30,18 @@ class ViewController: UIViewController {
     }
     
     // MARK: Lifecycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.isSkeletonable = true
+        
+        tableView.showAnimatedGradientSkeleton(usingGradient: .init(baseColor: .wetAsphalt), animation: nil)
+       
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  avatarImageView.isSkeletonable = true
         let gradient = SkeletonGradient(baseColor: .alizarin)
         let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
         view.showAnimatedGradientSkeleton(usingGradient: gradient, animation: animation)
@@ -74,6 +83,7 @@ class ViewController: UIViewController {
 
 extension ViewController: SkeletonTableViewDataSource {
     
+   // avatarImageView.isSkeletonable = true
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "Cell"
     }
